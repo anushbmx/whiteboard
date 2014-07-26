@@ -3,37 +3,6 @@
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
-.container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.container:before,
-.container:after {
-  display: table;
-  content: " ";
-}
-
-.container:after {
-  clear: both;
-}
-
-.container:before,
-.container:after {
-  display: table;
-  content: " ";
-}
-
-.container:after {
-  clear: both;
-}
-
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
 .row:before,
 .row:after {
   display: table;
@@ -62,10 +31,19 @@
 	padding: 4px 0;
 	background: rgba(0,0,0,0.2);
 }
+/* To make column center */
+.center{
+  margin:0 auto;
+  float: none !important;
+}
+/* To Remove the padding set by row */
+.padd0{
+  padding: 0 !important;
+}
 
 [class^="column-"],
 [class*="column-"] {
-	background: #f7f7f9;
+	/* background: #f7f7f9; */
 	}
 .column-xsmall-1,
 .column-xsmall-2,
@@ -117,8 +95,8 @@
 .column-large-12{
 	position:relative;
 	min-height: 1px; /*avoid columns from collapsing when they are empty*/
-	padding-left: 15px;
-	padding-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 /* Extra small Grid 
@@ -379,3 +357,36 @@
 /*
  * End of Large grid 
  */
+
+ /* Class to Hide and Center the elements on set res*/
+.hide-large{
+  display: none;
+}
+@media (max-width: 992px){
+  .hide-med{
+    display: none;
+  }
+  .view-med{
+    display: block;
+  }
+  .center-med{
+    margin:0 auto !important;
+  }
+  .padd0-med{
+    padding: 0 !important;
+  }
+}
+@media (max-width: 768px){
+  .hide-small{
+    display: none;
+  }
+  .view-small{
+    display: block;
+  }
+  .center-small{
+    margin:0 auto !important;
+  }
+  .padd0-small{
+    padding: 0 !important;
+  }
+}
